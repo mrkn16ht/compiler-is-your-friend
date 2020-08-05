@@ -11,7 +11,7 @@ Questions:
 3) What did you learn from this exercise?
 */
 function safeDivide(): number {
-    let x: number = 42;
+    const x: number = 42; /* changed code, change let into const */
 
     if (x == 0) throw new Error("x should not be 0");
 
@@ -19,3 +19,10 @@ function safeDivide(): number {
 
     return 42 / x;
 }
+
+console.log(safeDivide())
+/* Answer:
+1) Originally, x will be assigned as 42, and because x = x - 42, then 42 / x  = 42 / 0
+2) Bug is the variable x become constant
+3) Learn the difference between let and constant when assign the value into the variable
+*/
